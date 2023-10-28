@@ -97,11 +97,12 @@
 
     const MA_counties = "towns.topojson";
     const gini_index = "gini_index.csv";
-    const county_data = "county.json"
+    const county_data = "county.json";
 
     Promise.all([
         d3.json(MA_counties),
-        d3.csv(gini_index)
+        d3.csv(gini_index),
+        
     ]).then(data => {
         const topology_data = data[0];
         const csv_data = data[1];
